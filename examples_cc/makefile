@@ -6,10 +6,10 @@ CXXFLAGS = -c -O2
  %.o : %.cc
 	$(CXX) $(CXXFLAGS) $*.cc
 
-fin_recipes.h:
-	cp ../all_cc_progs/fin_recipes.h .
-normdist.h:
-	cp ../all_cc_progs/normdist.h .
+#fin_recipes.h:
+#	cp ../all_cc_progs/fin_recipes.h .
+#normdist.h:
+#	cp ../all_cc_progs/normdist.h .
 
 
 LIB = librecipes.a 
@@ -36,8 +36,8 @@ librecipes.a:
 # CXXFLAGS += -D_HAVE_GSL_
 # LIBS += -lgsl 
 
-run_all_examples.o: librecipes.a fin_recipes.h normdist.h  $(LIB) 
-run_all_examples: librecipes.a fin_recipes.h run_all_examples.o 
+run_all_examples.o: librecipes.a ../all_cc_progs/fin_recipes.h ../all_cc_progs/normdist.h $(LIB) 
+run_all_examples: librecipes.a run_all_examples.o 
 	g++ run_all_examples.o  $(LIBS) -L. -lrecipes  -o run_all_examples 
 run: run_all_examples
 	./run_all_examples
