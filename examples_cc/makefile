@@ -3,14 +3,9 @@ ALLFILES = run_all_examples.cc
 
 CXX = gcc
 CXXFLAGS = -c -O2
+CXXFLAGS += -I../all_cc_progs/
  %.o : %.cc
 	$(CXX) $(CXXFLAGS) $*.cc
-
-#fin_recipes.h:
-#	cp ../all_cc_progs/fin_recipes.h .
-#normdist.h:
-#	cp ../all_cc_progs/normdist.h .
-
 
 LIB = librecipes.a 
 librecipes.a: 
