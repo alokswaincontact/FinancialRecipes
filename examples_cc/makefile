@@ -45,7 +45,7 @@ run: run_all_examples
 
 TO_CLEAN_FILES += $(LIB) run_all_examples *~
 TO_CLEAN_FILES += *.o
-TO_CLEAN_FILES += example*.cc *.h  
+#TO_CLEAN_FILES += example*.cc *.h  
 
 clean:
 	rm -f $(TO_CLEAN_FILES) 
