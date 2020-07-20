@@ -26,3 +26,8 @@
 
 # VIM files
 *.swp
+
+#Cscope Files
+cscope.files
+
+*.DS_Store
