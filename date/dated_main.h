@@ -22,7 +22,7 @@ template<class T> dated<T> dated<T>::operator= (const dated<T>& dobs) {
     return *this;
 };
 
-template<class T> dated<T>::~dated();
+//template<class T> dated<T>::~dated(){;};
 
 template<class T> bool dated<T>::empty() const { return (dates_.size()<1); };  
 
